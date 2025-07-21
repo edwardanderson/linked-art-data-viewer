@@ -1,0 +1,290 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page layout */
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+  background: #f8f9fa;
+  color: #222;
+  padding: 1em;
+  max-width: 960px;
+  margin: auto;
+}
+
+header {
+  margin-bottom: 2em;
+}
+
+form {
+  display: flex;
+  gap: 0.5em;
+}
+
+input[type="url"] {
+  flex: 1;
+  padding: 0.5em;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+nav#breadcrumbs {
+  margin-bottom: 1.5em;
+  font-size: 1rem;
+}
+
+nav#breadcrumbs a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+nav#breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+main#content {
+  padding-bottom: 4em;
+}
+
+main#content>section>a {
+  font-weight: bold;
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.8em;
+  color: #222;
+}
+
+
+/* Nested section styling */
+section {
+  margin-left: 1em;
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  border-left: 2px solid #ddd;
+}
+
+/* Base styles for all relevant sections */
+section:is(
+  .Activity,
+  .AttributeAssignment,
+  .Creation,
+  .Destruction,
+  .DigitalObject,
+  .Dimension,
+  .Event,
+  .Formation,
+  .Group,
+  .HumanMadeObject,
+  .Identifier,
+  .InformationObject,
+  .Language,
+  .LinguisticObject,
+  .MeasurementUnit,
+  .Name,
+  .Person,
+  .Place,
+  .Production,
+  .PropositionalObject,
+  .Right,
+  .TimeSpan,
+  .Type,
+  .Set,
+  .VisualItem) {
+  padding-left: 1em;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 1em;
+  border-left: 5px solid;
+  /* base border, color overridden below */
+}
+
+/* Event */
+section.Activity
+section.Creation,
+section.Destruction,
+section.Event,
+section.Formation,
+section.Production {
+  border-left-color: #96e0f6;
+}
+
+section.Dimension {
+  border-left-color: #c6c6c6;
+}
+
+
+section.DigitalObject {
+  border-left-color: #ebcffb;
+}
+
+section.Identifier,
+section.Name {
+  border-left-color: #FEF3BA;
+}
+
+section.HumanMadeObject {
+  border-left-color: #E1BA9C;
+}
+
+section.Group,
+section.Person {
+  border-left-color: #FFBDCA;
+}
+
+section.Place {
+  border-left-color: #aff090;
+}
+
+/* Information object */
+section.AttributeAssignment,
+section.InformationObject,
+section.LinguisticObject,
+section.PropositionalObject,
+section.Right,
+section.Set,
+section.VisualItem {
+  border-left-color: #fffa40;
+}
+
+section.TimeSpan {
+  border-left-color: #ddfffe;
+}
+
+section.Language,
+section.MeasurementUnit,
+section.Type {
+  border-left-color: #FAB565;
+}
+
+/* Links inside content */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Text formatting */
+strong {
+  font-weight: bold;
+}
+
+blockquote {
+  margin: 0.5em 0;
+  /* padding-left: 1em; */
+  /* border-left: 3px solid #ccc; */
+  color: #555;
+  font-style: italic;
+}
+
+a._linked-art-resource {
+  background-color: rgba(255, 245, 180, 0.5);
+  /* soft yellowish background */
+  /* padding: 0.1em 0.3em; */
+  border-radius: 3px;
+}
+
+button.loading {
+  position: relative;
+  color: transparent;
+}
+
+button.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Footer _links table */
+#footer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+  font-size: 0.95rem;
+}
+
+#footer table tr {
+  /* subtle separation between rows */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#footer table tr:last-child {
+  border-bottom: none;
+}
+
+#footer table td {
+  padding: 0.75em 0;        /* vertical spacing */
+  vertical-align: top;
+}
+
+#footer table td:first-child {
+  padding-right: 1em;       /* space between columns */
+  font-weight: 500;         /* highlight the CURIE column */
+  color: #444;
+}
+
+#footer table a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#footer table a:hover {
+  text-decoration: underline;
+}
+
+/* Add spacing below the summary paragraph */
+.search-results-summary {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Space around navigation controls */
+.search-nav {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Ensure the results list has space above */
+.search-results {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}

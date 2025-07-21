@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Linked Art Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+      <form id="url-form">
+        <input type="url" id="url-input" placeholder="Enter Linked Art JSON-LD URL" required />
+        <button type="submit" id="load-button">Load</button>
+      </form>
+    </header>
+  
+    <nav id="breadcrumbs"></nav>
+  
+    <main id="content"></main>
+  
+    <footer id="footer"></footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+  
+</html>
