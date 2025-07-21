@@ -5,7 +5,7 @@ An experimental [Linked Art](https://linked.art/) data viewer.
 > [!WARNING]
 > This is a vibe-coded prototype. No architecture, no tests.
 
-![Example](example.png | width=25%)
+![[Example: Irises](https://edwardanderson.github.io/linked-art-data-viewer/src/?urlhttps://data.getty.edu/museum/collection/object/c88b3df0-de91-4f5b-a9ef-7b2b9a6d8abb)](example.png)
 
 Features:
 - Class styles from the Linked Art documentation
